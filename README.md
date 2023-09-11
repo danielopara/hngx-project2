@@ -27,12 +27,12 @@ Before you begin, make sure you have the following requirements and dependencies
 ### Installation
 
 1. Clone the repository: 
-    ```
+    ```shell
     git clone https://github.com/danielopara/hngx-project2.git
     cd hngx-project2
     ```
 2. In the project directory run these commands to install the dependencies and run the API:
-    ```
+    ```shell
     npm install
     npm start
     ```
@@ -77,6 +77,25 @@ Before you begin, make sure you have the following requirements and dependencies
 
 ## Usage Example
 
+### Create a new person
+
+**HTTP Method:** POST
+**Endpoint:** `https://hngxproject2.onrender.com/api`
+**Request Body:**
+```json
+{
+    "name": "Jones"
+}
+```
+**Response:**
+```json
+{
+    "_id": "64fe1c7732278ab8bb0c04a2",
+    "name": "Jones"
+}
+
+```
+
 ### Retrieve a List of Persons
 
 **HTTP Method:** GET
@@ -86,7 +105,7 @@ Before you begin, make sure you have the following requirements and dependencies
 ```json
 [
     {
-        "_id": "64fe1c7732278ab8bb0c04a5",
+        "_id": "64fe1c7732278ab8bb0c04a2",
         "name": "John"
     }
 ]
@@ -95,13 +114,44 @@ Before you begin, make sure you have the following requirements and dependencies
 ### Retrieve a Person by id
 
 **HTTP Method:** GET
-**Endpoint:** `https://hngxproject2.onrender.com/api/64fe1c7732278ab8bb0c04a5`
+**Endpoint:** `https://hngxproject2.onrender.com/api/64fe1c7732278ab8bb0c04a2`
 **Response:**
 ```json
 
     {
-        "_id": "64fe1c7732278ab8bb0c04a5",
+        "_id": "64fe1c7732278ab8bb0c04a2",
         "name": "John"
+    }
+
+```
+
+### Update a Person by id
+
+**HTTP Method:** PUT
+**Endpoint:** `https://hngxproject2.onrender.com/api/64fe1c7732278ab8bb0c04a2`
+**Request Body:**
+```json
+{
+    "name": "Jim"
+}
+**Response:**
+```json
+    message: "Person name updated",
+    updatedPlayer: {
+        "_id": "64fe1c7732278ab8bb0c04a2",
+        "name": "Jim"
+    }
+
+```
+
+**HTTP Method:** DELETE
+**Endpoint:** `https://hngxproject2.onrender.com/api/64fe1c7732278ab8bb0c04a2`
+**Response:**
+```json
+
+  {
+              "_id": "64fe1c7732278ab8bb0c04a2",
+              "message": "This Id has been deleted",
     }
 
 ```
