@@ -61,6 +61,47 @@ Before you begin, make sure you have the following requirements and dependencies
 - Response: JSON response with the resource data.
 
 ### Update
+
 - Endpoint `https://hngxproject2.onrender.com/api/:_id`
 - Method: `PUT`
 - Description: Update an existing person by its ID.
+- Request Body: JSON data containing the updated name of the person.
+- Response: JSON response containing the updated person.
+
+### Delete
+
+- Endpoint `https://hngxproject2.onrender.com/api/:_id`
+- Method: `DELETE`
+- Description: Delete a person from the database by id.
+- Response: JSON response indicating the person with the id has been deleted.
+
+## Usage Example
+
+### Retrieve a List of Persons
+
+**HTTP Method:** GET
+**Endpoint:** `https://hngxproject2.onrender.com/api`
+**Response:**
+
+```json
+[
+    {
+        "_id": "64fe1c7732278ab8bb0c04a5",
+        "name": "John"
+    }
+]
+```
+
+### Retrieve a Person by id
+
+**HTTP Method:** GET
+**Endpoint:** `https://hngxproject2.onrender.com/api/64fe1c7732278ab8bb0c04a5`
+**Response:**
+```json
+
+    {
+        "_id": "64fe1c7732278ab8bb0c04a5",
+        "name": "John"
+    }
+
+```
