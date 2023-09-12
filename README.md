@@ -138,12 +138,13 @@ Before you begin, make sure you have the following requirements and dependencies
 
 **Response:**
 ```json
-    message: "Person name updated",
-    updatedPlayer: {
-        "_id": "64fe1c7732278ab8bb0c04a2",
-        "name": "Jim"
-    }
-
+{
+  "message": "Person name updated",
+  "updated Person": {
+    "id": "64fe1c7732278ab8bb0c04a2",
+    "name": "Jim"
+  }
+}
 ```
 
 **HTTP Method:** DELETE

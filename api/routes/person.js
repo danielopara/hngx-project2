@@ -91,7 +91,7 @@ router.put("/:personId", (req, res, next) => {
 
       res.status(200).json({
         message: "Person name updated",
-        updatedPlayer: {
+        updatedPerson: {
           id: updatedPerson._id,
           name: name,
         },
