@@ -19,7 +19,7 @@ mongoose
   .catch((err) => {
     console.log("error connection to port 7070 " + err);
   });
-
+app.use(cors({ origin: "*" }));
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
